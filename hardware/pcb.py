@@ -1,7 +1,11 @@
 from skidl import *
 from pcbflow import *
 
+from pathlib import Path
+
 if __name__ == "__main__":
+    root_dir = Path(__file__).parent.parent
+    kicad_libs = root_dir.joinpath("hardware/kicad_libs")
     ### make netlist(circuit) by skidl
 
     KEY_COUNT = 10
@@ -18,8 +22,8 @@ if __name__ == "__main__":
     # fmt: on
 
     # add local libraries
-    lib_search_paths[KICAD].append("hardware/kicad_libs")
-    footprint_search_paths[KICAD].append("hardware/kicad_libs/kicad.pretty")
+    lib_search_paths[KICAD].append(str(kicad_libs))
+    footprint_search_paths[KICAD].append(str(kicad_libs.joinpath("kicad.pretty")))
 
     # components
     diode = Part(
@@ -91,7 +95,7 @@ if __name__ == "__main__":
     LAYER_BOTTOM = "GBL"
 
     # DRC setting
-    circuit = builtins.default_circuit
+    circuit = skidl.builtins.default_circuit
     # create board
     board = Board((BOARD_WIDTH, BOARD_HEIGHT))
     board.drc.trace_width = 0.5
@@ -232,13 +236,6 @@ if __name__ == "__main__":
     )
 
     board.add_bitmap(
-        (11.25, 45),
-        "hardware/imgs/QR.png",
-        side="bottom",
-        scale=0.75,
-    )
-
-    board.add_bitmap(
         (11, 28.5),
         "hardware/imgs/logo-python-powered-w-logo.png",
         side="bottom",
@@ -257,20 +254,6 @@ if __name__ == "__main__":
         "hardware/imgs/logo-python-powered-w-text.png",
         side="bottom",
         scale=0.7,
-    )
-
-    board.add_bitmap(
-        (47.5, 22),
-        "hardware/imgs/dm9-logo.png",
-        side="bottom",
-        scale=0.8,
-    )
-
-    board.add_bitmap(
-        (66.5, 22),
-        "hardware/imgs/hsgw-logo.png",
-        side="bottom",
-        scale=0.4,
     )
 
     # place texts

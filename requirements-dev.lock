@@ -18,6 +18,7 @@ attrs==23.1.0
 babel==2.12.1
 backcall==0.2.0
 beautifulsoup4==4.12.2
+black==23.7.0
 bleach==6.0.0
 cachetools==5.2.1
 cad-viewer-widget==1.4.1
@@ -30,6 +31,7 @@ casadi==3.6.3
 certifi==2023.7.22
 cffi==1.15.1
 charset-normalizer==3.2.0
+click==8.1.6
 comm==0.1.4
 contourpy==1.1.0
 cssselect2==0.7.0
@@ -77,6 +79,7 @@ matplotlib-inline==0.1.6
 mistune==0.8.4
 multidict==6.0.4
 multimethod==1.9.1
+mypy-extensions==1.0.0
 nbclassic==1.0.0
 nbclient==0.5.13
 nbconvert==6.5.4
@@ -92,6 +95,7 @@ packaging==23.1
 pandocfilters==1.5.0
 parso==0.8.3
 path==16.7.1
+pathspec==0.11.2
 pcbflow @ git+https://github.com/fuji-hito/pcbflow.git@dev/fix_kicad/ja
 pexpect==4.8.0
 pickleshare==0.7.5
