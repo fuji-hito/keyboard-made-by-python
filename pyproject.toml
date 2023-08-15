@@ -1,0 +1,33 @@
+[project]
+name = "keyboard-made-by-python"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = [
+    "skidl>=1.2.1",
+    "cadquery>=2.3.1",
+    "jupyter_cadquery>=3.5.2",
+    "svglib>=1.5.1",
+    "numpy>=1.24.4",
+    "pillow>=10.0.0",
+    "reportlab>=4.0.4",
+    "jupyterlab<3.6",
+    "matplotlib>=3.7.2",
+    "cadquery-massembly>=1.0.0",
+    "pcbflow @ git+https://github.com/fuji-hito/pcbflow.git@dev/fix_kicad/ja",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pyvista>=0.41.1",
+    "trame>=3.1.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true

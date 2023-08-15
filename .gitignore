@@ -15,3 +15,21 @@ __pycache__/
 *.Identifier
 
 keyboard-made-by-python/
+*.GBR
+*.DRL
+*.GTO
+*.GBO
+*.GBL
+*.GBP
+*.GBS
+*.GML
+*.GTL
+*.GTP
+*.GTS
+*.stl
+.ipynb_checkpoints/
+kbd_python_preview_all.png
+kbd_python_preview_bot_docu.png
+kbd_python_preview_bot.png
+kbd_python_preview_top_docu.png
+kbd_python_preview_top.png
